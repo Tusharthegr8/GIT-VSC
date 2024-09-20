@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Hover Effect</title>
+    <style>
+      body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a2e;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a3c29;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.emoji-container:hover {
+    transform: scale(1.1);
+}
+
+.emoji {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #ffdd00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.emoji:hover {
+    transform: rotate(180deg);
+}
+
+.face {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.eye {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eye::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mouth {
+    width: 100px;
+    height: 40px;
+    background-color: #704a20;
+    border-radius: 0 0 50px 50px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.emoji-container:hover .mouth {
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 10px solid #704a20;
+}
+
+    </style>
+</head>
+<body>
+    <div class="emoji-container">
+        <div class="emoji">
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                </div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
