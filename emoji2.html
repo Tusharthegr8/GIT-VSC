@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley Face</title>
+    <style>
+        .smiley-face {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #fde129;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #5b025c;
+        }
+
+
+        .eyes {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateX(-50%);
+        }
+
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .eye::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border-radius: 50%;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mouth {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            width: 100px;
+            height: 40px;
+            background-color: #704a20;
+            border-radius: 0 0 50px 50px;
+            transform: translateX(-50%);
+        }
+        .smiley-face:hover{
+          .eye::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -20%);
+        }
+          
+          .mouth {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            width: 100px;
+            height: 30px;
+            background-color: #704a20;
+            border-radius: 0 0 0 0;
+            transform: translateX(-50%);
+        }
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="smiley-face">
+        <div class="eyes">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>
